@@ -1,0 +1,102 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style type="text/css">
+        #namesContainer {
+            width: 500px;
+            float: left;
+        }
+
+        #formContainer {
+            float: left;
+          margin-top: 15px;
+        }
+
+            #formContainer label {
+                width: 300px;
+                float: left;
+            }
+
+            #formContainer div {
+                margin: 0px 0px 20px 0px;
+            }
+
+        #linkContainer {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+@*Get all items from server*@
+    @Html.ActionLink("Api Documentation", "Index", "Help", new { area = "" }, null)
+    <div id="namesContainer">
+        <ol id="names"></ol>
+    </div>
+
+    <div id="formContainer">
+        <div>
+            <label>Configuration Name</label>
+            <input type="text" id="configName"/>
+            <br/>
+            <label>Email adress</label>
+            <input type="text" id="emailAdress"/>
+            <br />
+            <label>Hosting Name</label>
+            <input type="text" id="hostingName"/>
+            <br />
+            <label>Ftp username</label>
+            <input type="text" id="ftpUserName"/>
+            <br />
+            <label>Type of hosting</label>
+            <input type="text" id="typeOfHosting"/>
+            <br/>
+            <label>Registration</label>
+            <input type="checkbox" id="checker">
+            <br />
+            <button id="addNewBtn">Add Configuration</button>
+        </div>
+        <div>
+            <label>Configuration Name</label>
+            <input type="text" id="configNameChange" />
+            <br />
+            <label>Email adress</label>
+            <input type="text" id="emailAdressChange" />
+            <br />
+            <label>Hosting Name</label>
+            <input type="text" id="hostingNameChange" />
+            <br />
+            <label>Ftp username</label>
+            <input type="text" id="ftpUserNameChange" />
+            <br />
+            <label>Type of hosting</label>
+            <input type="text" id="typeOfHostingChange" />
+            <br/>
+            <label>Registration</label>
+            <input type="checkbox" id="checkerChange">
+            <br />
+            <button id="changeBtn">Change some values</button>
+        </div>
+        <div>
+            <label>Name of config</label>
+            <input type="text" id="configDeleteName" />
+            <button id="deleteBtn">Delete</button>
+        </div>
+        <div id="linkContainer">
+            <div>Link to last added item :</div>
+            <div id="location"></div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/CustomScripts/CustomScript.js"></script>
+
+</body>
+</html>
